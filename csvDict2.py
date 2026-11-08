@@ -40,7 +40,8 @@ def write_records():
             print("Invalid Department!")
 
         role=input("Enter role :")
-        emp.update({"role":role})
+        if role in ("Software Developer","Web Developer","Data Analyst","Cloud Engineer"," Support","HR Manager","Sales Executive","Sales Manager","Finance Manager","Accountant"):
+             emp.update({"role":role})
 
         city = input("Enter Employee City: ")
         emp.update({"city":city})
@@ -111,18 +112,8 @@ def increment():
 
     for r in record:
         print(r)
-        '''  
-def increment():
-    record = display_Record()
+          
 
-    for r in record:
-        if r["department"] == "Support":
-            r["salary"] = int(r["salary"]) + 200
-
-    print("\nAfter Increment:")
-    for r in record:
-        print(r)
-        '''
 
 
  
